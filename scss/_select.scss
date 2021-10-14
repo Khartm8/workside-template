@@ -1,0 +1,41 @@
+.main__select {
+    align-self: flex-end;
+    margin-bottom: 3.6rem;
+}
+
+.select {
+    display: none;
+    position: relative;
+
+    @include tablet {
+        display: flex;
+    }
+
+    &::after {
+        content: url(../Assets/Down-Arrow.svg);
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 1.5rem;
+        right: 2.4rem;
+        pointer-events: none;
+    }
+
+    &__input {
+        padding: 1.6rem 4.5rem 1.6rem 2.2rem;
+        appearance: none;
+        background: $darkGray;
+        border: none;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: white;
+        cursor: pointer;
+
+        &:focus {
+            outline: 1px solid $lightGray;
+        }
+    }
+
+}

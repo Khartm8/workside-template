@@ -1,0 +1,562 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 375px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  background-color: #15192A;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1239px) {
+  .wrapper {
+    padding: 0 4rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .wrapper {
+    padding: 0 2rem;
+  }
+}
+
+.main__wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 130px 416px 593px;
+  justify-content: space-between;
+}
+
+@media (max-width: 1239px) {
+  .main__wrapper {
+    padding: 0 4rem 4rem;
+    grid-template-columns: 416px 504px;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 1023px) {
+  .main__wrapper {
+    padding: 0 0 4rem;
+    grid-template-columns: minmax(200px, 414px);
+    justify-content: center;
+  }
+}
+
+.nav {
+  padding: 4rem 0 5rem;
+}
+
+@media (max-width: 1239px) {
+  .nav {
+    padding: 4rem 0 4.6rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .nav {
+    padding: 4rem 0 3.8rem;
+  }
+}
+
+.nav__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+@media (max-width: 1023px) {
+  .nav__wrapper {
+    flex-direction: column;
+  }
+}
+
+.nav__menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 1023px) {
+  .nav__menu {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+}
+
+.nav__menu_active {
+  display: flex;
+}
+
+.nav__item {
+  margin-right: 2.4rem;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 1023px) {
+  .nav__item {
+    margin-right: 0;
+    padding: 1rem;
+  }
+}
+
+.nav__link {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  color: #8F9BB3;
+}
+
+.nav__link:hover, .nav__link:focus, .nav__link:active {
+  color: white;
+}
+
+.nav__profile {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1023px) {
+  .nav__profile {
+    display: none;
+  }
+}
+
+.nav__avatar {
+  width: 36px;
+  height: 36px;
+  margin-right: 1.2rem;
+}
+
+.nav__username {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  margin-right: 1.2rem;
+}
+
+.nav__burger {
+  display: none;
+  background: none;
+  border: 0;
+}
+
+@media (max-width: 1023px) {
+  .nav__burger {
+    display: flex;
+    position: absolute;
+    top: .3rem;
+    right: 0;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1023px) {
+  .logo {
+    align-self: flex-start;
+  }
+}
+
+.arrow {
+  background: none;
+  border: 0;
+}
+
+.main__select {
+  align-self: flex-end;
+  margin-bottom: 3.6rem;
+}
+
+.select {
+  display: none;
+  position: relative;
+}
+
+@media (max-width: 1239px) {
+  .select {
+    display: flex;
+  }
+}
+
+.select::after {
+  content: url(../Assets/Down-Arrow.svg);
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 1.5rem;
+  right: 2.4rem;
+  pointer-events: none;
+}
+
+.select__input {
+  padding: 1.6rem 4.5rem 1.6rem 2.2rem;
+  appearance: none;
+  background: #1F273C;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: white;
+  cursor: pointer;
+}
+
+.select__input:focus {
+  outline: 1px solid #8F9BB3;
+}
+
+@media (max-width: 1239px) {
+  .filters {
+    display: none;
+  }
+}
+
+.filters__title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  margin-bottom: 1.6rem;
+}
+
+.filters__block {
+  margin-bottom: 5.6rem;
+}
+
+.filters__block:last-child {
+  margin-bottom: 0;
+}
+
+.checkbox {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.checkbox:last-child {
+  margin-bottom: 0;
+}
+
+.checkbox__input {
+  appearance: none;
+  position: absolute;
+}
+
+.checkbox__input:checked + .checkbox__label::before {
+  background: #005DF9 url(../Assets/checkmark.svg) no-repeat center;
+}
+
+.checkbox__label {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #8F9BB3;
+  padding-left: 2.8rem;
+}
+
+.checkbox__label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #8F9BB3;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.job-list__item {
+  margin-bottom: 2.4rem;
+}
+
+.job-list__item:last-child {
+  margin-bottom: 0;
+}
+
+.job-card {
+  display: block;
+  padding: 2.4rem;
+  color: white;
+  background-color: #1F273C;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+@media (max-width: 1023px) {
+  .job-card {
+    border-radius: 0;
+    pointer-events: all;
+  }
+}
+
+@media (max-width: 375px) {
+  .job-card {
+    padding: 1rem;
+  }
+}
+
+.job-card__top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.6rem;
+}
+
+.job-card__logo {
+  width: 44px;
+  height: 44px;
+  margin-right: 1.7rem;
+}
+
+.job-card__title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  margin-bottom: .4rem;
+}
+
+.job-card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.job-card__tags {
+  display: flex;
+  align-items: center;
+}
+
+.job-card__tag {
+  padding: 1rem;
+  background-color: #191F30;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.job-card__tag:not(:first-child) {
+  margin-left: .8rem;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+}
+
+.location__icon {
+  margin-right: .4rem;
+}
+
+.location__name {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #8F9BB3;
+}
+
+.payment {
+  display: flex;
+  align-items: center;
+}
+
+.payment__icon {
+  margin-right: 1.2rem;
+}
+
+.payment__value {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+
+.job {
+  display: flex;
+  flex-direction: column;
+  padding: 4.6rem;
+  border-radius: 5px;
+  background-color: #1F273C;
+}
+
+@media (max-width: 1023px) {
+  .job {
+    display: none;
+  }
+}
+
+.job__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 3.6rem;
+}
+
+.job__name {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  margin-bottom: .4rem;
+}
+
+.job__date {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+
+.job__info {
+  margin-bottom: 3.6rem;
+}
+
+.job__overview {
+  margin-bottom: 2.4rem;
+}
+
+.job__requirements {
+  margin-bottom: 2.8rem;
+}
+
+.job__title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  margin-bottom: 1.6rem;
+}
+
+.job__checkmark {
+  margin-right: 1.2rem;
+}
+
+.job__btn {
+  align-self: flex-end;
+}
+
+.job-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.4rem;
+  border-radius: 5px;
+  background-color: #15192A;
+}
+
+.job-info__title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  margin-bottom: .4rem;
+}
+
+.job-info__subtitle {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #8F9BB3;
+}
+
+.job-overview__text {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #8F9BB3;
+}
+
+.job-requirements__item {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #8F9BB3;
+  margin-bottom: 1.2rem;
+}
+
+.job-requirements__item:last-child {
+  margin-bottom: 0;
+}
+
+.apply-btn {
+  padding: 1.6rem 2.4rem;
+  border: 0;
+  border-radius: 5px;
+  background-color: #005DF9;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: white;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+}
+
+@media (max-width: 1023px) {
+  .info {
+    padding: 3.2rem 0 4.7rem;
+    border-radius: 0;
+  }
+}
+
+.info .job__header {
+  padding: 0 2rem;
+}
+
+.info .job-info {
+  padding: 3.2rem 2rem;
+  border-radius: 0;
+}
+
+.info .job-overview {
+  padding: 0 2rem;
+}
+
+.info .job-requirements {
+  padding: 0 2rem;
+}
+
+@media (max-width: 1023px) {
+  .info .apply-btn {
+    margin-right: 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

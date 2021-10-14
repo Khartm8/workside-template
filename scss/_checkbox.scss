@@ -1,0 +1,38 @@
+.checkbox {
+    position: relative;
+    margin-bottom: 1.2rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__input {
+        appearance: none;
+        position: absolute;
+
+        &:checked + .checkbox__label::before {
+            background: $blue url(../Assets/checkmark.svg) no-repeat center;
+        }
+    }
+
+    &__label {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: $lightGray;
+        padding-left: 2.8rem;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 1;
+            top: -1px;
+            width: 18px;
+            height: 18px;
+            border: 1px solid $lightGray;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+    }
+}

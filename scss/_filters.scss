@@ -1,0 +1,21 @@
+.filters {
+
+    @include tablet {
+        display: none;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        margin-bottom: 1.6rem;
+    }
+
+    &__block {
+        margin-bottom: 5.6rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

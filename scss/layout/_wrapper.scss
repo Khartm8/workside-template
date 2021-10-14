@@ -1,0 +1,14 @@
+.wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        padding: 0 4rem;
+    }
+
+    @include mobile {
+        padding: 0 2rem;
+    }
+}

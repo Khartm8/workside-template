@@ -1,0 +1,151 @@
+.job {
+    display: flex;
+    flex-direction: column;
+    padding: 4.6rem;
+    border-radius: 5px;
+    background-color: $darkGray;
+
+    @include mobile {
+        display: none;
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 3.6rem;
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.3rem;
+        margin-bottom: .4rem;
+    }
+
+    &__date {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+
+    &__info {
+        margin-bottom: 3.6rem;
+    }
+
+    &__overview {
+        margin-bottom: 2.4rem;
+    }
+
+    &__requirements {
+        margin-bottom: 2.8rem;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        margin-bottom: 1.6rem;
+    }
+
+    &__checkmark {
+        margin-right: 1.2rem;
+    }
+
+    &__btn {
+        align-self: flex-end;
+    }
+
+}
+
+.job-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.4rem;
+    border-radius: 5px;
+    background-color: $primaryGray;
+
+    &__title {
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        margin-bottom: .4rem;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: $lightGray;
+    }
+}
+
+.job-overview__text {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: $lightGray;
+}
+
+.job-requirements {
+
+    &__item {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: $lightGray;
+        margin-bottom: 1.2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.apply-btn {
+    padding: 1.6rem 2.4rem;
+    border: 0;
+    border-radius: 5px;
+    background-color: $blue;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: white;
+    cursor: pointer;
+}
+
+.info {
+    display: flex;
+
+    @include mobile {
+        padding: 3.2rem 0 4.7rem;
+        border-radius: 0;
+    }
+   
+    .job__header {
+        padding: 0 2rem;
+    }
+
+    .job-info {
+        padding: 3.2rem 2rem;
+        border-radius: 0;
+    }
+
+    .job-overview {
+        padding: 0 2rem;
+    }
+
+    .job-requirements {
+        padding: 0 2rem;
+    }
+
+    .apply-btn {
+        
+        @include mobile {
+            margin-right: 2rem;
+        }
+    }
+}
